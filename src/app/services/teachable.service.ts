@@ -15,7 +15,7 @@ export class TeachableService {
   async init(): Promise<void> {
     if (!this.session.isLoggedIn || this.loopActive) return;
 
-    const URL = '/my_model/';
+    const URL = 'https://teachablemachine.withgoogle.com/models/3frw53_91/';
     this.model = await tmImage.load(`${URL}model.json`, `${URL}metadata.json`);
     this.maxPredictions = this.model.getTotalClasses();
 
@@ -50,7 +50,7 @@ export class TeachableService {
       a.probability > b.probability ? a : b
     );
 
-    if ((best.className === 'Ampolla' || best.className === 'Porra') && best.probability > 0.95) {
+    if ((best.className === 'Mobil' || best.className === 'Porra') && best.probability > 0.95) {
       this.session.logout();
       this.loopActive = false;
       this.webcam.stop();
