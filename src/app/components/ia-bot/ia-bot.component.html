@@ -1,0 +1,8 @@
+<div class="chat-container">
+  <div *ngFor="let m of messages">
+    <strong>{{ m.role === 'user' ? 'Tú' : 'Bot' }}:</strong> {{ m.content }}
+  </div>
+
+  <input [(ngModel)]="input" placeholder="Escribe tu mensaje..." />
+  <button (click)="send()">Enviar</button>
+</div>

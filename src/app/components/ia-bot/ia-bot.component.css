@@ -1,0 +1,19 @@
+.chat-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fefefe;
+}
+
+input {
+  width: 80%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+}
